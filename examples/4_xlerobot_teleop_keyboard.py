@@ -384,23 +384,21 @@ def main():
     FPS = 50
     # ip = "192.168.1.123"  # This is for zmq connection
     ip = "localhost"  # This is for local/wired connection
-    robot_name = "my_xlerobot_pc"
+    robot_name = "rosie"
 
     # For zmq connection
     # robot_config = XLerobotClientConfig(remote_ip=ip, id=robot_name)
     # robot = XLerobotClient(robot_config)    
 
     # For local/wired connection
-    robot_config = XLerobotConfig()
+    robot_config = XLerobotConfig(id=robot_name)
     robot = XLerobot(robot_config)
-    
+
     try:
         robot.connect()
         print(f"[MAIN] Successfully connected to robot")
     except Exception as e:
         print(f"[MAIN] Failed to connect to robot: {e}")
-        print(robot_config)
-        print(robot)
         return
         
     init_rerun(session_name="xlerobot_teleop_v2")
