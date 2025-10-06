@@ -1,0 +1,22 @@
+robot:
+  type: so101_follower
+  port: /dev/serial/by-id/usb-1a86_USB_Single_Serial_5A68009991-if00 # Right PI
+  id: xlerobot_right_arm
+  disable_torque_on_disconnect: true
+
+  cameras:
+    front:
+      type: opencv
+      index_or_path: /dev/cam_right
+      width: 1280
+      height: 720
+      fps: 30
+      warmup_s: 1
+
+
+teleop:
+  type: so101_leader
+  port: /dev/serial/by-id/usb-1a86_USB_Single_Serial_5A7A017922-if00
+  id: xlerobot_leader
+
+#display_data: true

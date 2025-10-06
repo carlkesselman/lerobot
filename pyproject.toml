@@ -57,7 +57,6 @@ classifiers = [
 keywords = ["lerobot", "huggingface", "robotics",  "machine learning", "artificial intelligence"]
 
 dependencies = [
-
     # Hugging Face dependencies
     "datasets>=4.0.0,<5.0.0",
     "diffusers>=0.27.2,<0.36.0",
@@ -88,6 +87,7 @@ dependencies = [
     "deepdiff>=7.0.1,<9.0.0",
     "imageio[ffmpeg]>=2.34.0,<3.0.0",
     "termcolor>=2.4.0,<4.0.0",
+    "ipython>=8.37.0",
 ]
 
 # Optional dependencies
@@ -216,6 +216,10 @@ lerobot-setup-can="lerobot.scripts.lerobot_setup_can:main"
 # ---------------- Tool Configurations ----------------
 [tool.setuptools.package-data]
 lerobot = ["envs/*.json"]
+
+[tool.uv]
+package = true
+python-preference = "managed"
 
 [tool.setuptools.packages.find]
 where = ["src"]
