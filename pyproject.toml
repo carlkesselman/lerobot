@@ -217,10 +217,6 @@ lerobot-setup-can="lerobot.scripts.lerobot_setup_can:main"
 [tool.setuptools.package-data]
 lerobot = ["envs/*.json"]
 
-[tool.uv]
-package = true
-python-preference = "managed"
-
 [tool.setuptools.packages.find]
 where = ["src"]
 
@@ -403,6 +399,8 @@ ignore_errors = false
 # ignore_errors = false
 
 [tool.uv]
+package = true
+python-preference = "managed"
 # wallx requires transformers==4.49.0 which conflicts with other extras that need >=4.53.0
 conflicts = [
     [
