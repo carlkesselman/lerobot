@@ -180,6 +180,9 @@ lerobot-imgtransform-viz="lerobot.scripts.lerobot_imgtransform_viz:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.uv]
+package=true
+
 [tool.ruff]
 target-version = "py310"
 line-length = 110
