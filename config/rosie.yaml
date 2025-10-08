@@ -19,7 +19,7 @@ cameras:
     fps: 30
   head:
     type: intelrealsense
-    serial_number_or_name: "836112060112"
+    serial_number_or_name: 836112060112
     fps: 30
     width: 1280
     height: 720
