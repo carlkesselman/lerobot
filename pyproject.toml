@@ -220,6 +220,9 @@ lerobot = ["envs/*.json"]
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.uv]
+package=true
+
 [tool.ruff]
 target-version = "py310"
 line-length = 110
